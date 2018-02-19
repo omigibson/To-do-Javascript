@@ -11,7 +11,7 @@ Lägg till-knappen:
 var addButton = document.getElementById("addButton");
 
 addButton.addEventListener("click", function () {
-	var task = prompt("Skriv den nya uppgiften här");
+	var task = document.getElementById("input").value;
 	
 	var li = document.createElement("li");
 	li.innerHTML = "<p>" + task + "</p>";
@@ -20,8 +20,8 @@ addButton.addEventListener("click", function () {
 	todos.appendChild(li);
 	
 	var doneButton = document.createElement("button");
-	doneButton.class = "donebutton";
-	doneButton.innerHTML = "Klarmarkera";
+	doneButton.className = "doneButton btn btn-outline-success btn-sm";
+	doneButton.innerHTML = "Klar";
 	doneButton.addEventListener("click", function(){
 		var listItem = this.parentNode;
 		listItem.removeChild(this);
@@ -31,7 +31,7 @@ addButton.addEventListener("click", function () {
 	li.appendChild(doneButton);
 	
 	var deleteButton = document.createElement("button");
-	deleteButton.class = "deletebutton";
+	deleteButton.className = "deleteButton btn btn-outline-danger btn-sm";
 	deleteButton.innerHTML = "Radera";
 	deleteButton.addEventListener("click", function(){
 	var listItem = this.parentNode;
