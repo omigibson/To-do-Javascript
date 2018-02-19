@@ -2,7 +2,7 @@
 Lägg till-knappen:
 1. Knappen hämtas via id.
 2. Knappen får en Eventlistener som lyssnar efter klick.
-3. När användaren klickar på knappen genomförs koden i den anonyma funktionen. En prompt skapas där användaren skriver uppgiften som hen vill lägga till.
+3. När användaren klickar på knappen skapas en prompt där användaren skriver uppgiften som hen vill lägga till.
 4. Ett nytt list-item skapas och fylls med användarens input.
 5. Listan med todos hämtas och den nya uppgiften läggs till med appendChild.
 6. Klar- och raderaknappar skapas, får egna eventListeners, och läggs till på användarens nya list-item.
@@ -35,7 +35,7 @@ addButton.addEventListener("click", function () {
 
 });
 
-/*Radera-knapp på enskild todo:
+/*Radera-knapp på enskild todo. Denna kod behövs för de todos som är hårdkodade in i index.html.
 1. Alla raderaknappar hämtas via klass och sparas som en NodeList i variabeln deleteButtons.
 2. NodeListen loopas igenom och varje knapp får en EventListener som lyssnar efter klick.
 3. Inuti funktionen hämtas den klickade knappens förälder och sparas i listItem.
@@ -50,3 +50,16 @@ deleteButtons[i].addEventListener("click", function(){
 	listItem.parentNode.removeChild(listItem);
 });
 }
+
+/*
+Rensa listan-knapp:
+1. Knappen hämtas via id.
+2. Knappen får en eventListener som lyssnar efter klick.
+3. Todo-listan hämtas via id.
+*/
+var deleteAllButton = document.getElementById("deleteAllButton");
+deleteAllButton.addEventListener("click", function () {
+	var list = document.getElementById("todos");
+	list.innerHTML = "";
+
+});
