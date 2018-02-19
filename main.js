@@ -22,6 +22,12 @@ addButton.addEventListener("click", function () {
 	var doneButton = document.createElement("button");
 	doneButton.class = "donebutton";
 	doneButton.innerHTML = "Klarmarkera";
+	doneButton.addEventListener("click", function(){
+		var listItem = this.parentNode;
+		listItem.removeChild(this);
+		var done = document.getElementById("done");
+		done.appendChild(listItem);
+	});
 	li.appendChild(doneButton);
 	
 	var deleteButton = document.createElement("button");
@@ -34,6 +40,28 @@ addButton.addEventListener("click", function () {
 	li.appendChild(deleteButton);
 
 });
+
+/*
+Klarmarkera-knapp. Denna kod behövs för de todos som är hårdkodade in i index.html. 
+1. Alla klarmarkera-knappar hämtas via klass och sparas som en NodeList i variabeln doneButtons.
+2. NodeListen loopas igenom och varje knapp får en EventListener som lyssnar efter klick.
+3. Inuti funktionen hämtas den klickade knappens förälder och sparas i listItem.
+4. Klarmarkera-knappen tas bort från listItem med removeChild och this.
+5. Klar-listan hämtas via id.
+5. listItem läggs till i klarlistan.
+*/
+
+var doneButtons = document.getElementsByClassName("doneButton");
+
+for(i = 0; i < doneButtons.length; i++){
+	doneButtons[i].addEventListener("click", function(){
+		var listItem = this.parentNode;
+		listItem.removeChild(this);
+		var done = document.getElementById("done");
+		done.appendChild(listItem);
+	});
+}
+
 
 /*Radera-knapp på enskild todo. Denna kod behövs för de todos som är hårdkodade in i index.html.
 1. Alla raderaknappar hämtas via klass och sparas som en NodeList i variabeln deleteButtons.
@@ -56,10 +84,10 @@ Rensa listan-knapp:
 1. Knappen hämtas via id.
 2. Knappen får en eventListener som lyssnar efter klick.
 3. Todo-listan hämtas via id.
+4. Innehållet i listan sätts till en tom sträng och allt som fanns där tidigare försvinner.
 */
 var deleteAllButton = document.getElementById("deleteAllButton");
 deleteAllButton.addEventListener("click", function () {
 	var list = document.getElementById("todos");
 	list.innerHTML = "";
-
 });

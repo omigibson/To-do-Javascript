@@ -9,7 +9,7 @@
 
 <body>
 	<main>
-
+		<div id="todosWrapper">
 		<h1>Att göra</h1>
 		<button id="addButton">Lägg till uppgift</button>
 		<button id="deleteAllButton">Rensa listan</button>
@@ -25,13 +25,19 @@
 				<button class="deleteButton">Radera</button>
 			</li>
 		</ul>
-<h2>Avklarade uppgifter</h2>
-<ul>
+		</div>
+		<div id ="doneWrapper">
+		<h2>Avklarade uppgifter</h2>
+		<ul id="done">
 			<li>
 				<p>Plugga till duggan</p>
-				<button>Radera</button>
+				<button class=deleteButton>Radera</button>
 			</li>
+		</div>
 	</main>
+	<footer>
+		<p>Följ mig på <a href="https://github.com/omigibson">Github</a>. Där kan du lära dig mer om <a href="https://github.com/omigibson/To-do-Javascript">hur jag byggde denna applikation.</a></p>
+	</footer>
 	<script src="main.js"></script>
 </body>
 
