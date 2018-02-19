@@ -1,11 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<title>To do</title>
 </head>
+
 <body>
+	<main>
+
+		<h1>Att göra</h1>
+		<button id="addButton">Lägg till uppgift</button>
+		<button id="deleteAllButton">Rensa listan</button>
+		<ul id="todos">
+			<li>
+				<p>Skaffa kattvakt</p>
+				<button class="doneButton">Klarmarkera</button>
+				<button class="deleteButton">Radera</button>
+			</li>
+			<li>
+				<p>Köpa vinterskor</p>
+				<button class="doneButton">Klarmarkera</button>
+				<button class="deleteButton">Radera</button>
+			</li>
+		</ul>
+<h2>Avklarade uppgifter</h2>
+<ul>
+			<li>
+				<p>Plugga till duggan</p>
+				<button>Radera</button>
+			</li>
+	</main>
 	<script src="main.js"></script>
 </body>
+
 </html>
