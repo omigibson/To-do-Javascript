@@ -16,11 +16,11 @@ addButton.addEventListener("click", function () {
 	liButtons.className = "liButtons";
 	li.appendChild(liButtons);
 
-	//En ny knapp skapas och får attribut
+	//En ny klar-knapp skapas och får attribut
 	var doneButton = document.createElement("button");
 	doneButton.className = "doneButton btn btn-outline-success btn-sm";
 	doneButton.innerHTML = "Klar";
-	
+
 	//Den nya knappen får en Eventlistener som lyssnar efter klick
 	doneButton.addEventListener("click", function () {
 		// Den klickade knappens förälder hämtas och sparas sparas i liButtons. Med hjälp av removeChild kan Klarmarkera-knappen tas bort från liButtons. Den behövs inte längre när uppgiften är avklarad

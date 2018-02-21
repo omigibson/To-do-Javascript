@@ -1,4 +1,9 @@
-body main #new {
-	margin: 2.5rem 0;
-	
+body main {
+	#todosWrapper .doneButton {
+		margin: 0 .4rem;
+	}
+	#new {
+		margin: 2.5rem 0;
+
+	}
 }

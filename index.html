@@ -1,66 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Bitter|Mukta+Mahee" rel="stylesheet"> 
+	<!-- länk till de Google fonts som används -->
+	<link href="https://fonts.googleapis.com/css?family=Bitter|Mukta+Mahee" rel="stylesheet">
+	<!-- Länk till Bootstraps stylesheet -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<title>To do</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<title>Att göra-lista</title>
 </head>
 
 <body>
-	<main>
-		<div id="todosWrapper">
-		<h1>Att göra</h1>
-		
-		<ul id="todos">
-			<li>
-				<p>Skaffa kattvakt</p>
-				<div class=liButtons>
-				<button type="button" class="doneButton btn btn-outline-success btn-sm">Klar</button>
-				<button type="button" class="deleteButton btn btn-outline-danger btn-sm">Radera</button>
-				</div>
-			</li>
-			<li>
-				<p>Köpa vinterskor</p>
-				<div class=liButtons>
-				<button type="button" class="doneButton btn btn-outline-success btn-sm">Klar</button>
-				<button type="button" class="deleteButton btn btn-outline-danger btn-sm">Radera</button>
-				</div>
-			</li>
-		</ul>
-		<button type="button" class="btn btn-warning" id="deleteAllButton">Rensa listan</button>
-		</div>
+	<main role="main">
+		<section id="todosWrapper">
+			<h1>Att göra</h1>
+
+			<ul id="todos">
+				<li>
+					<p>Skaffa kattvakt</p>
+					<div class=liButtons>
+						<button type="button" class="doneButton btn btn-outline-success btn-sm">Klar</button>
+						<button type="button" class="deleteButton btn btn-outline-danger btn-sm">Radera</button>
+					</div>
+				</li>
+				<li>
+					<p>Köpa vinterskor</p>
+					<div class=liButtons>
+						<button type="button" class="doneButton btn btn-outline-success btn-sm">Klar</button>
+						<button type="button" class="deleteButton btn btn-outline-danger btn-sm">Radera</button>
+					</div>
+				</li>
+			</ul>
+			<button type="button" class="btn btn-warning" id="deleteAllButton">Rensa listan</button>
+		</section>
 		<div id="tabletStyleWrapper">
-		<div id="new">
-		<h2>Lägg till en ny uppgift</h2>
-		<form>
-		<label for="input" class="sr-only">Lägg till en ny uppgift</label>
-			<input type="text" id="input" placeholder="Skriv din nya uppgift här">
-		</form>
-		<button type="button" class="btn btn-success" id="addButton">Lägg till uppgift</button>
-		</div>
-		<div id ="doneWrapper">
-		<h2>Avklarade uppgifter</h2>
-		<ul id="done">
-			<li>
-				<p>Plugga till duggan</p>
-				<div class=liButtons>
-				<button type="button" class="deleteButton btn btn-outline-danger btn-sm">Radera</button>
-				</div>
-			</li>
-		</div>
+			<section id="new">
+				<h2>Lägg till en ny uppgift</h2>
+				<form>
+					<label for="input" class="sr-only">Lägg till en ny uppgift</label>
+					<input type="text" id="input" placeholder="Skriv din nya uppgift här">
+				</form>
+				<button type="button" class="btn btn-success" id="addButton">Lägg till uppgift</button>
+			</section>
+			<section id="doneWrapper">
+				<h2>Avklarade uppgifter</h2>
+				<ul id="done">
+					<li>
+						<p>Plugga till duggan</p>
+						<div class=liButtons>
+							<button type="button" class="deleteButton btn btn-outline-danger btn-sm">Radera</button>
+						</div>
+					</li>
+				</ul>
+			</section>
 		</div>
 	</main>
-	<footer>
+	<footer role="contentinfo">
 		<p>Följ mig på <a href="https://github.com/omigibson">Github</a>. Där kan du lära dig mer om <a href="https://github.com/omigibson/To-do-Javascript">hur jag byggde denna applikation.</a></p>
 	</footer>
+	<!-- Javascript, både eget och från Bootstrap -->
 	<script src="main.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
